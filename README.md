@@ -83,6 +83,25 @@ Io> Car type
 ==> Car
 ```
 
+Create another car `ferrari`, notice that this object start with lowercase character,
+>Idiomatically, an object that begins
+with an uppercase name is a type, so Io sets the type slot. Any clones of
+that type starting with lowercase letters will simply invoke their parents’
+type slot.
+```
+Io> ferrari := Car clone
+==>  Car_0x4fccd60:
+Io> ferrari slotNames
+==> list()
+Io> ferrari description
+==> A vehicle with 4 wheels, run by gas
+Io> ferrari type
+==> Car
+```
+
+
+
+
 
 
 
