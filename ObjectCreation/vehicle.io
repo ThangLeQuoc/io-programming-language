@@ -11,3 +11,11 @@ Car description := "A vehicle with 4 wheels, run by gas"
 ferrari := Car clone
 ferrari description
 ferrari type
+
+Car horn := method("Piff Piff" println)
+Car horn
+ferrari horn
+
+ferrari proto
+ferrari getSlot("horn")
+Lobby

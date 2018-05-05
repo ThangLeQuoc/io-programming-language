@@ -99,6 +99,72 @@ Io> ferrari type
 ==> Car
 ```
 
+### Methods
+Method is also an object with type `block`, syntax to create an assign a method to object slot is familiar
+```
+Io> Car horn := method("Piff Piff" println)
+==> method(
+    "Piff Piff" println
+)
+Io> Car horn
+Piff Piff
+==> Piff Piff
+```
+
+The subclass can execute the method of parent object
+```
+Io> ferrari horn
+Piff Piff
+==> Piff Piff
+```
+
+>• Every thing is an object.
+• Every interaction with an object is a message.
+• You don’t instantiate classes; you clone other objects called prototypes.
+• Objects remember their prototypes.
+• Objects have slots.
+• Slots contain objects, including method objects.
+• A message returns the value in a slot or invokes the method in a
+slot.
+• If an object can’t respond to a message, it sends that message to
+its prototype.
+
+### List and Map
+Create an empty list: `todos := List clone`
+
+Create list using method: `todos := (33, "jump")`
+
+Get list size: `todos size`
+
+Append an item: `todos append("kick")`
+
+Get item at index: `todos at (1)`
+
+Pop item: `todos pop`
+
+Prepend item:
+```
+Io> Action = list("Hit", "Kick", "Dash")
+==> list(Hit, Kick, Dash)
+Io> Action size
+==> 3
+Io> Action append("Punch")
+==> list(Hit, Kick, Dash, Punch)
+Io> Action at (2)
+==> Dash
+Io> Action pop
+==> Punch
+```
+
+### Commonly used messages
+| Message          | Description         | Example                  |
+| ---------------- |:-------------------:| ------------------------:|
+| `clone`          | Create object       | `Vehicle := Object clone` |
+| `slotNames`      | List all slots      |   `Car slotNames` |
+| `getSlot`      | List all slots      |   `Car slotNames` |
+| `proto`      | List all slots      |   `Car slotNames` |
+| `Lobby`      |       |    |
+
 
 
 
